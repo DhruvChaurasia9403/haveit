@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "185919221809",
+    "project_id": "haveit-d98f6",
+    "storage_bucket": "haveit-d98f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185919221809:android:1ba9435e39cca967b66510",
+        "android_client_info": {
+          "package_name": "com.example.haveit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSJf8ZD0RsOrtmqvnEzGc9ougMFY_3R6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

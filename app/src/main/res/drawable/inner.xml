@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Gradient Background -->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#0077C6"
+                android:centerColor="#3090E6"
+                android:endColor="#6BB7FF"
+                android:angle="45" />
+            <corners android:radius="20dp" /> <!-- Adjust the radius for roundness -->
+        </shape>
+    </item>
+
+    <!-- Border (optional) -->
+    <!-- You can add a border if desired -->
+    <!--
+    <item android:right="2dp" android:left="2dp" android:top="2dp" android:bottom="2dp">
+        <shape>
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="20dp" />
+        </shape>
+    </item>
+    -->
+</layer-list>
