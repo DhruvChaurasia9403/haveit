@@ -22,8 +22,8 @@
         android:layout_width="75dp"
 
         android:layout_height="75dp"
-        android:backgroundTint="#99FFF5"
-        app:cardCornerRadius="20dp"
+        android:backgroundTint="#FFFFFF"
+        app:cardCornerRadius="50dp"
         app:cardElevation="20dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
@@ -32,6 +32,8 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:src="@drawable/logo1"
+            android:layout_margin="4dp"
             android:scaleType="centerCrop" />
     </androidx.cardview.widget.CardView>
 
@@ -44,7 +46,7 @@
         android:layout_marginTop="48dp"
         android:elevation="10dp"
         android:fontFamily="@font/yatra_one"
-        android:text="HaveIt"
+        android:text="Socio-Eats"
         android:textColor="#FFFFFF"
         android:textSize="50sp"
         app:layout_constraintTop_toTopOf="parent"

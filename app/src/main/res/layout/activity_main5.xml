@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,54 +8,93 @@
     android:background="#FFFFFF"
     android:orientation="vertical"
     tools:context=".MainActivity5">
+
+    <!-- Header CardView -->
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:backgroundTint="#40C4FF"
-        android:layout_height="wrap_content">
-    <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/headerCardView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_margin="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:backgroundTint="#0525A5">
 
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/yatra_one"
-        android:gravity="center"
-        android:padding="10dp"
-        android:textColor="#FFFFFF"
-        android:text="haveIt"
-        android:textSize="20dp"
-        android:textStyle="bold"/>
-
-        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="#EAEAEA"
-            android:drawableEnd="@drawable/baseline_find_replace_24"
-            android:fontFamily="sans-serif"
-            android:padding="10dp"
-            android:text="SEARCH HERE"
-            android:textStyle="italic"
-            android:textColor="#72373737" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="50dp"
+                android:backgroundTint="@color/white"
+                android:layout_margin="2dp"
+                android:padding="2dp"
+                >
 
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="4dp"
+                android:src="@drawable/logo1"
+                android:contentDescription="Logo" />
+            </androidx.cardview.widget.CardView>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#EAEAEA"
+                android:drawableEnd="@drawable/baseline_find_replace_24"
+
+                android:paddingStart="16dp"
+                android:textColorHint="#ffff30"
+                android:paddingEnd="16dp"
+                android:hint="Search Here"
+                android:textColor="#ffff30"
+                android:textSize="16sp" />
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+    <!-- RecyclerViews -->
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:scrollbars="horizontal"
+        android:id="@+id/RV1"
+        android:layout_width="0dp"
         android:layout_margin="10dp"
-        android:id="@+id/RV1"/>
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/headerCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#DADADA"
+        android:scrollbars="horizontal" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:id="@+id/RV2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_margin="10dp"
-        android:id="@+id/RV2"/>
-</LinearLayout>
+        android:background="#DADADA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/RV1" />
+
+    <!-- Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/baseline_food_bank_24"
+        app:backgroundTint="#2FFFFF"
+        app:borderWidth="0dp"
+        android:layout_gravity="bottom|end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

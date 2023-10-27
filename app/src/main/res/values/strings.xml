@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">haveIt</string>
+
+    <string name="item1">
+        Mixed Vegetable Curry, or Mixed Veg for short, is a classic Indian vegetarian dish. It\'s a delightful medley of assorted fresh vegetables like carrots, peas, beans, and more, cooked in a luscious, spiced gravy. This dish offers a burst of vibrant flavors and colors on your plate, making it a favorite choice for those seeking a wholesome and nutritious meal.
+    </string>
+
+    <string name="item2">
+        Paneer Tikka is a popular North Indian appetizer. It features chunks of paneer (Indian cottage cheese) marinated in a flavorful mixture of yogurt and spices. These marinated paneer pieces are then skewered and grilled, creating a smoky, charred exterior with a soft and creamy interior. Paneer Tikka is a vegetarian\'s delight and a must-try for anyone who appreciates the rich and aromatic flavors of Indian cuisine.
+    </string>
+
+    <string name="item3">
+        Vegetable Biryani is a fragrant and aromatic rice dish that combines long-grain basmati rice with a mix of vegetables and a blend of spices. This dish offers a symphony of flavors and textures, with tender vegetables, aromatic spices, and perfectly cooked rice. It\'s a complete meal in itself, often served with raita (yogurt with herbs and spices) or a side salad. Vegetable Biryani is beloved for its tantalizing taste and is a go-to choice for vegetarians and rice enthusiasts.
+    </string>
+
+    <string name="item4">
+        Dal Makhani is a creamy and indulgent lentil curry. It\'s prepared by slow-cooking black lentils and kidney beans in a rich tomato-based gravy with generous amounts of butter and cream. The result is a silky, velvety texture and a deeply satisfying taste. Dal Makhani is a staple in North Indian cuisine and is often served with naan or rice. Its combination of hearty lentils and luxurious flavors makes it a comfort food favorite.
+    </string>
+
+
+
 </resources>

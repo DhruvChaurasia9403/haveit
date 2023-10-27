@@ -14,8 +14,8 @@ class MyAdapter2(val List2 :ArrayList<Name2>,val context:Activity):
     interface onClickListner2{
         fun onItemClick2(position: Int)
     }
-    fun setOnItemClickListener2(listener:onClickListner2){
-        myListner2 = listener
+    fun setOnItemClickListener2(listener2:onClickListner2){
+        myListner2 = listener2
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyAdapter2.MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.lower,parent,false)

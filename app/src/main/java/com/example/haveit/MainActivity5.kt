@@ -49,6 +49,16 @@ class MainActivity5 : AppCompatActivity() {
             "Flat Number-607",
             "Flat Number-408"
         )
+        val name2 = arrayOf(
+            "Flat No.-101",
+            "Flat No.-302",
+            "Flat No.-303",
+            "Flat No.-302",
+            "Flat No.-905",
+            "Flat No.-206",
+            "Flat No.-607",
+            "Flat No.-408"
+        )
         val price = arrayOf(
             "120/-",
             "150/-",
@@ -77,7 +87,17 @@ class MainActivity5 : AppCompatActivity() {
             "Paneer Tikka",
             "Mixed Veg.",
             "Veg. Biryani",
-            "Chaap"
+            "Biryani"
+        )
+        val description = arrayOf(
+            getString(R.string.item1),
+            getString(R.string.item2),
+            getString(R.string.item3),
+            getString(R.string.item4),
+            getString(R.string.item2),
+            getString(R.string.item1),
+            getString(R.string.item3),
+            getString(R.string.item3)
         )
 
         myRecyclerView = findViewById<RecyclerView>(R.id.RV1)
@@ -89,37 +109,40 @@ class MainActivity5 : AppCompatActivity() {
             nameList.add(item)
         }
         for(j in image.indices){
-            val item2 = Name2(name[j],image[j],dining[j],dish[j],price[j])
+            val item2 = Name2(name2[j],image[j],dining[j],dish[j],price[j])
             nameList2.add(item2)
         }
-        val adap2 = MyAdapter2(nameList2,this)
-        myRecyclerView2.adapter = MyAdapter2(nameList2,this)
-
         val adap = MyAdapter(nameList, this)
-        val adapter = adap
-        myRecyclerView.adapter = adapter
+        myRecyclerView.adapter = adap
         adap.setOnItemClickListner(object : MyAdapter.onClickListner {
             override fun onItemClick(position: Int) {
                 val intent = Intent(this@MainActivity5, MainActivity6::class.java)
-                intent.putExtra("flat", nameList[position].flat)
-                intent.putExtra("image", image[position])
-                startActivity(intent)
-            }
-        })
-
-        adap2.setOnItemClickListener2(object : MyAdapter2.onClickListner2 {
-            override fun onItemClick2(position: Int) {
-                val intent = Intent(this@MainActivity5, MainActivity6::class.java)
-                intent.putExtra("flat", nameList2[position].flat2)
-                intent.putExtra("image", image[position])
+                intent.putExtra("flat", name2[position])
+                intent.putExtra("image2", image[position])
                 intent.putExtra("dining", dining[position])
                 intent.putExtra("dish", dish[position])
                 intent.putExtra("owner", owner[position])
                 intent.putExtra("price", price[position])
+                intent.putExtra("description",description[position])
                 startActivity(intent)
             }
         })
 
-
+        val adap2 = MyAdapter2(nameList2, this)
+        myRecyclerView2.adapter = adap2
+        adap2.setOnItemClickListener2(object : MyAdapter2.onClickListner2 {
+            override fun onItemClick2(position: Int) {
+                val intent = Intent(this@MainActivity5, MainActivity6::class.java)
+                val item2 = nameList2[position]
+                intent.putExtra("flat", name2[position])
+                intent.putExtra("image2", image[position])
+                intent.putExtra("dining", item2.dining)
+                intent.putExtra("dish", item2.dish)
+                intent.putExtra("owner", owner[position])
+                intent.putExtra("price", item2.price)
+                intent.putExtra("description",description[position])
+                startActivity(intent)
+            }
+        })
     }
 }

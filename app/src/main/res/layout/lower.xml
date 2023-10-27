@@ -3,13 +3,16 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
-        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
         app:cardElevation="10dp"
         >
         <LinearLayout
@@ -34,11 +37,9 @@
                     android:layout_height="wrap_content"
                     android:text="Flat - 101"
                     android:textColor="#727272"
-                    android:textSize="25dp"
-                    android:textStyle="bold"
+                    android:textSize="20dp"
                     android:fontFamily="@font/alfa_slab_one"
-                    android:padding="10dp"
-                    android:textFontWeight="1000"/>
+                    android:padding="5dp"/>
 
                 <TextView
                     android:id="@+id/dish"
@@ -48,7 +49,7 @@
                     android:text="Mixed Veg. (for 2)"
                     android:padding="5dp"
                     android:textColor="#727272"
-                    android:textSize="12dp" />
+                    android:textSize="10dp" />
                 <TextView
                     android:id="@+id/dining"
                     android:layout_width="match_parent"
@@ -57,7 +58,7 @@
                     android:text="Dining for 2"
                     android:padding="5dp"
                     android:textColor="#727272"
-                    android:textSize="12dp"/>
+                    android:textSize="10dp"/>
                 <TextView
                     android:id="@+id/price"
                     android:layout_width="match_parent"
@@ -66,7 +67,7 @@
                     android:fontFamily="@font/yeseva_one"
                     android:gravity="center"
                     android:textColor="@color/black"
-                    android:textSize="20dp"/>
+                    android:textSize="18dp"/>
 
             </LinearLayout>
         </LinearLayout>
