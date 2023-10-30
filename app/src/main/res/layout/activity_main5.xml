@@ -86,8 +86,8 @@
 
     <!-- Floating Action Button -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/baseline_food_bank_24"
         app:backgroundTint="#2FFFFF"
         app:borderWidth="0dp"
